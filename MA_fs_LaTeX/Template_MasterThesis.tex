@@ -1,0 +1,376 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Masters/Doctoral Thesis 
+% LaTeX Template
+% Version 2.5 (27/8/17)
+%
+% This template was downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% This template is based on a template by:
+% Steve Gunn (http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/)
+% Sunil Patel (http://www.sunilpatel.co.uk/thesis-template/)
+%
+% Template license:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------	
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\PassOptionsToClass{openany}{MastersDoctoralThesis}
+
+\documentclass[
+12pt, % The default document font size, options: 10pt, 11pt, 12pt
+%oneside, % Two side (alternating margins) for binding by default, uncomment to switch to one side
+english, % ngerman for German
+onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
+oneside,
+%draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
+%nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
+%liststotoc, % Uncomment to add the list of figures/tables/etc to the table of contents
+%toctotoc, % Uncomment to add the main table of contents to the table of contents
+%parskip, % Uncomment to add space between paragraphs
+%nohyperref, % Uncomment to not load the hyperref package
+headsepline, % Uncomment to get a line under the header
+openany
+%chapterinoneline, % Uncomment to place the chapter title next to the number on one line
+%consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
+]{MastersDoctoralThesis} % The class file specifying the document structure
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage{array,booktabs,ragged2e}
+\newcolumntype{R}[1]{>{\RaggedLeft\arraybackslash}p{#1}}
+\usepackage{color, colortbl}
+\usepackage{multirow}
+\definecolor{Gray}{gray}{0.9}
+\usepackage[flushleft]{threeparttable}
+\usepackage{footnote}
+\usepackage{amssymb}% http://ctan.org/pkg/amssymb
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\usepackage{graphics}
+\usepackage{nicefrac}
+\usepackage{lscape}
+\usepackage[nottoc]{tocbibind}
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{mathpazo} % Use the Palatino font by default
+\usepackage{booktabs}
+\usepackage{subfigure}
+\usepackage{bigdelim}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{threeparttable}
+\usepackage{csquotes}
+\usepackage[authordate,bibencoding=auto,backend=biber,natbib]{biblatex-chicago}
+\addbibresource{thesis_bib.bib}
+\DefineBibliographyStrings{english}{%
+  bibliography = {References},
+  references = {References},
+}
+
+\makeatletter
+\newenvironment{chapterappendices}{%
+  % Restart section numbering from A, B, C...
+  \setcounter{section}{0}
+  \renewcommand{\thesection}{Appendix \thechapter \Alph{section}}
+  \renewcommand{\thesubsection}{\thechapter\Alph{section}.\arabic{subsection}}
+
+  % Allocate more space for section numbering in the ToC
+  \addtocontents{toc}{%
+    \protect\patchcmd{\protect\l@section}{2.3em}{7em}{}{}
+    \setcounter{tocdepth}{0}  % do not show Appendices
+  }
+}{%
+  % Revert to usual space in the ToC when exiting this environment
+  \addtocontents{toc}{%
+    \protect\patchcmd{\protect\l@section}{7em}{2.3em}{}{}
+        \setcounter{tocdepth}{1} 
+  }
+}
+\makeatother
+
+%----------------------------------------------------------------------------------------
+%	MARGIN SETTINGS
+%----------------------------------------------------------------------------------------
+
+\geometry{
+	paper=a4paper, % Change to letterpaper for US letter
+	inner=2cm, % Inner margin
+	outer=2cm, % Outer margin
+	bindingoffset=2cm, % Change if you to change the binding offset at the left margin
+	top=2cm, % Top margin
+	bottom=2cm, % Bottom margin
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+%----------------------------------------------------------------------------------------
+%	THESIS INFORMATION
+%----------------------------------------------------------------------------------------
+
+\thesistitle{Does medieval trade still matter? Reassessment for European regions in the 20th century} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
+\supervisor{Nikolaus Wolf} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
+\secondsupervisor{tba} % Your supervisor's name, this is used in the title page, print it elsewhere with \secsupname
+\degree{Master of Science} % Your degree name, this is used in the title page and abstract, print it elsewhere with \degreename
+\author{Fabian Salger} % Your name, this is used in the title page and abstract, print it elsewhere with \authorname
+\studentid{573366} % Your student ID, print it with \id
+\addresses{} % Your address, this is not currently used anywhere in the template, print it elsewhere with \addressname
+\keywords{} % Keywords for your thesis, this is not currently used anywhere in the template, print it elsewhere with \keywordnames
+\university{\href{https://www.hu-berlin.de/}{Humboldt-Universität zu Berlin}} % Your university's name and URL, this is used in the title page and abstract, print it elsewhere with \univname
+\department{\href{https://www.wiwi.hu-berlin.de/de/professuren/vwl/wg}{Institut für Wirtschaftsgeschichte}} % Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
+\faculty{{~}} % Your faculty's name and URL, this is used in the title page and abstract, print it elsewhere with \facname
+
+\AtBeginDocument{
+\hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
+\hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
+\hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
+}
+ 
+\makeatletter
+\def\hlinewd#1{%
+\noalign{\ifnum0=`}\fi\hrule \@height #1 %
+\futurelet\reserved@a\@xhline}
+\makeatother
+
+\usepackage{alphalph}
+\renewcommand*{\thesubfigure}{%
+\alphalph{\value{subfigure}})%
+}%
+
+\makeatletter
+\newcommand{\enableopenany}{%
+  \@openrightfalse%
+}
+
+\begin{document}
+\sloppy
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+\begin{center}
+
+\vspace*{.01\textheight}
+
+\begin{figure}
+\centering
+\includegraphics{husiegel}
+\end{figure}
+
+{\scshape\LARGE \univname\par}\vspace{1.5cm} % of
+\textsc{\Large \degreename}\\[0.5cm] % Thesis type
+
+\HRule \\[0.3cm] % Horizontal line
+{\huge \bfseries \ttitle\par}\vspace{0.3cm} % Thesis title
+\HRule \\[1cm] % Horizontal line
+ 
+\begin{minipage}[t]{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Author:}\\
+{\authorname}\\ % Author name
+{\id}\\
+\end{flushleft}
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+\begin{flushright} \large
+\emph{Supervisors:} \\
+{\supname}\\
+{\secsupname}\\
+\end{flushright}
+\end{minipage}\\[1cm]
+ 
+\vfill
+
+\large \textit{A thesis submitted to the Chair of Economic History\\
+in partial fulfillment of the requirements for the degree \degreename }\\[1cm]% University requirement
+ 
+\vfill
+
+{\large \today}\\[1cm] % Date
+ 
+\vfill
+\end{center}
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	DECLARATION PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{declaration}
+\addchaptertocentry{\authorshipname} % Add the declaration to the table of contents
+\noindent
+I hereby declare that my thesis is the result of my own work and that I have marked all sources, including online sources, which have been cited without changes or in modified form, especially sources of texts, graphics, tables and pictures.
+\break\break
+\noindent
+I assure that I have not submitted this thesis for any other examination yet.
+\break\break
+\noindent
+I am aware that in case of any breach of these rules procedures concerning fraud or attempted fraud will be taken in accordance with the subject-specific examination regulations and/or the Allgemeine Satzung für Studien- und Prüfungsangelegenheiten (ASSP) or the Allgemeine Satzung zur Regelung von Zulassung, Studium und Prüfung der Humboldt-Universität zu Berlin (ZSP-HU).
+\break\break
+\noindent Signed:\\
+\rule[0.5em]{25em}{0.5pt} % This prints a line for the signature
+ 
+\noindent Date:\\
+\rule[0.5em]{25em}{0.5pt} % This prints a line to write the date
+\end{declaration}
+
+\cleardoublepage
+
+%----------------------------------------------------------------------------------------
+%	QUOTATION PAGE
+%----------------------------------------------------------------------------------------
+
+%\vspace*{0.2\textheight}
+
+%\noindent {\itshape  Thank you note}\bigbreak
+
+ 
+%----------------------------------------------------------------------------------------
+%	ABSTRACT PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
+In this thesis
+
+\end{abstract}
+
+
+%----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES PAGES
+%----------------------------------------------------------------------------------------
+\setcounter{tocdepth}{1} % Show subsections
+
+\tableofcontents % Prints the main table of contents
+
+\listoffigures % Prints the list of figures
+
+\listoftables % Prints the list of tables
+
+\bigskip
+
+\begin{center}
+
+\end{center}
+
+%\listofappendices
+
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Begin numeric (1,2,3...) page numbering
+
+\pagestyle{thesis} % Return the page headers back to the "thesis" style
+% Include the chapters of the thesis as separate files from the Chapters folder
+% Uncomment the lines as you write the chapters
+
+\chapter{Introduction}
+
+The aim of this thesis is to make use of data and results from Wahl 2016, and replicate the approach using a dataset of several points in time.
+
+The starting point for the analysis is a set of trade centers in six European countries for which there are GDP data from the Roses Wolf dataset available spanning roughly 10 years back to 1900. In addition to GDP, the data also includes Employment shares across the three main sectors IND, AGRI, and SERV as well as population of the respective NUTS-2 regions.
+
+...Data preparation...
+As a first step, I replicate the regional analysis following Wahl to show that on this level of aggregation, medieval trade cities remain a significant predictor of relative economic performance in the 20th century.
+
+
+
+\newpage
+
+\chapter{Literature Review}
+
+\citep{smith1776} had some great insights and \citet{krugman1998}, too.
+
+\newpage
+
+\chapter{Data}
+For the analysis I source data primarily from Wahl, Wolf, and geographic information, a  shapefile from the latter. Refer to the Data Appendix for detail. 
+ 
+\section{Data Description}
+Describe the data, including a Descriptive Table covering all variables used with summarising information.
+
+\subsection{Dependent Variables}
+
+\subsection{Independent Variables}
+
+\section{Data Aggregation}
+
+\subsection{WFM}
+wide-form merge
+
+\subsection{LFP}
+long-form Panel like
+
+\section{Composition of Variables}
+var comp
+Data Chapter ends with the ready-to-use dataset MA Data
+
+\newpage
+
+\chapter{Analysis}
+
+\section{Exploratory Data Analysis}
+\subsection{Sample Overview}
+Maps
+\subsection{Sample Overview}
+Graphs
+
+\section{Empirical Baseline Model Approach}
+Models and Fits, general approach:
+I set up a baseline model first, in which I closely replicate the models run by Wahl.
+
+\subsection{Model with reduced fit}
+Reduced Fit 
+
+\subsection{Information Loss in Aggregation}
+Analyse potential reasons for statistically insignificant results
+
+\section{Alternative Empirical Approaches}
+
+\subsection{Growth since 1900 as dependent variable}
+Reduced Fit
+
+\subsection{Growth over Observation Periods as dependent variable}
+Reduced Fit 
+
+\subsection{mining and trade center interaction}
+
+\subsection{dropping East Germany}
+
+\section{X}
+
+\newpage
+
+\chapter{Conclusion}
+ 
+ 
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - APPENDICES
+%----------------------------------------------------------------------------------------
+\appendix % Cue to tell LaTeX that the following "chapters" are Appendices
+
+% Include the appendices of the thesis as separate files from the Appendices folder
+% Uncomment the lines as you write the Appendices
+
+\include{Appendices/AppendixA}
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+ 
+%\chapter{References}
+\backmatter
+\printbibliography[heading=bibintoc]
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}  
+
