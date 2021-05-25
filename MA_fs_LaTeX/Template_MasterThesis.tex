@@ -67,7 +67,7 @@ openany
   bibliography = {References},
   references = {References},
 }
-
+\usepackage{hyperref}
 \makeatletter
 \newenvironment{chapterappendices}{%
   % Restart section numbering from A, B, C...
@@ -272,78 +272,157 @@ In this thesis
 
 \chapter{Introduction}
 
-The aim of this thesis is to make use of data and results from Wahl 2016, and replicate the approach using a dataset of several points in time.
+The premise for this thesis is the main result of Wahl (2016), which argues that medieval trade activity led to agglomeration and has caused differences in contemporary regional economic development in Europe. Wahl (2016) contributes to the literature on the origins of the concentration of economic development, identifying a causal link from medieval trade activity over city growth to current regional economic development. 
 
-The starting point for the analysis is a set of trade centers in six European countries for which there are GDP data from the Roses Wolf dataset available spanning roughly 10 years back to 1900. In addition to GDP, the data also includes Employment shares across the three main sectors IND, AGRI, and SERV as well as population of the respective NUTS-2 regions.
+This thesis in turn examines to what extent the main empirical result from Wahl (2016) can be replicated using a series of historical GDP data. Adapting the methodology applied by Wahl (2016), this procedure adds \textit{time} of dimension corresponding to the historical span of the respective data to the analysis. Obeservational units throughout the analyses are mainly restricted by the availability of data on measures of economic performance. For example, Gross Domestic Product per capita ("GDP p.c.") is collected on regional levels according to the "Nomenclature of Units for Territorial Statistic" ("NUTS"). NUTS is a hierarchical system standard organizing the economic territory of Europe. Initially adopted in 2003, the standard is regularly revised in agreement and cooperation with the member states of the European Union ("EU"). Its revisions amend the standard in administrative cycles of at least three years and may include name changes, region mergers and splits as well as border shifts on any level. All changes are regularly published by Eurostat. Where this thesis combines data with boundaries of different revisions, translation according to the official correspondence tables is done as part of data preparation.
 
-...Data preparation...
-As a first step, I replicate the regional analysis following Wahl to show that on this level of aggregation, medieval trade cities remain a significant predictor of relative economic performance in the 20th century.
+The GDP data used in \autoref{chap:WOLF} is taken from Rosés-Wolf database, version 6 (2020). A benefit of this database is that it provides regional GDP data reaching back to 1900 CE. In addition to GDP, this database also includes employment shares across the three main sectors Industry, Agriculture, and Service as well as time-varying Population and time-constant Area of each regional unit. The accompanying caveat is that the data is structured on NUTS2 level of observational detail. Matching the database with variables and control groups from Wahl(2016) which are available on NUTS3 requires aggregation as a conversion mechanism between the NUTS levels. The respective formula depends on the characteristics of each variable and is reported in \autoref{sec:DataAgg}.
 
+Wahl 2016: medieval trade had statistically significant consequences for economic development --> Self-reinforcing nature of the described agglomeration and spatial concentration processes
+--> path-dependency of city development
 
+there is a statistically significant and economically relevant positive relationship between medieval trade activities and contemporary regional economic development.
+
+Fixed Effects Model
+
+Definitions "List of Terms"
 
 \newpage
 
 \chapter{Literature Review}
 
-\citep{smith1776} had some great insights and \citet{krugman1998}, too.
+Wahl 2016: medieval trade had statistically significant consequences for economic development --> Self-reinforcing nature of the described agglomeration and spatial concentration processes
+--> path-dependency of city development
+
+This places the paper in the subject field of Economic Geography. 
+
+... Kurzer Abriss wie es zu NEG kommt und was andere Autoren schreiben. Endogenous Growth Path dependency, diversion/conversion, determinants for economic prosperity
+
+The predictions from New Economic Geography with first and second nature causes of agglomeration vs. Wahl 
+
+Several studies focus on first-nature causes of agglomeration and find
+
+other papers combine or isolate second-nature causes of agglomeration
+second nature (i.e. man made) causes of agglomeration (e.g. knowledge spillovers) linked to characteristics of medieval trade and trade cities
+
+By connecting the economic development with measures on medieval trade
+
+Detailed historical data would allow for additional nuance in the classification of regional medieval trade activity. 
+
+
+%\citep{smith1776} had some great insights and \citet{krugman1998}, too.
 
 \newpage
 
-\chapter{Data}
-For the analysis I source data primarily from Wahl, Wolf, and geographic information, a  shapefile from the latter. Refer to the Data Appendix for detail. 
- 
-\section{Data Description}
-Describe the data, including a Descriptive Table covering all variables used with summarising information.
+\chapter{Direct Replication Benchmark}
+
+This chapter introduces a direct replication of the regional analysis following Wahl (2016). It lays out the empirical specification of the model and reports replication regression results corresponding to Wahl (2016), table 2. \footnote{A working version of the Wahl dataset was kindly made available by the author. Initial data preparation is therefore limited to matching variables used in the publication with the names given in the available dataset. In some cases this is straightforward, while in others several variables have similar short names and are thus not as easily identified.}
+
+The replication regression runs serve as a reference point for the analyses in the following chapters with GDP data from further sources. From a practical perspective, the replication verifies that the model fits indeed resemble the original regression results as closely as possible. In order to achieve equal results, each control group must be composed of the correct set of variables. Further, the dependent variable, the main independent variables, and the empirical specification of the model must be accurately called.
+
+\section{Data Description Wahl}
+
+Wahl (2016) links medieval trade to measures of current economic development. Because the standard measure for economic performance across Europe is GDP, which is reported according to NUTS, the observations in Wahl (2016) and this chapter refer to NUTS3 regions according to NUTS revision 2006. 
+
+Wahl's approach: medieval data on trade cities is available, but contemporary GDP is not available on a city level.
+1) identify cities that are considered to have had important commercial or trade activity in medieval times, that is 1500. The regions these cities are situated in today, are considered trade regions or trade centers and coded accordingly.
+2) calculate a distance variable that shows the distance between each region's centroid and the nearest trade city
+3) compute variable reporting the number of centuries a city can be considered an important trade city
 
 \subsection{Dependent Variables}
+The depth of an observational unit is primarily constrained by the data availability of GDP.
+main dependent variable not 
+ln GDP pc
 
 \subsection{Independent Variables}
 
-\section{Data Aggregation}
+The main categorization   independent variab identify cities that are considered to have had important commercial or trade activity in 1500 around the late medieval period. The regions these cities are situated in today, are considered trade regions or trade centers and coded accordingly.
+2) calculate a distance variable that shows the distance between each region's centroid and the nearest trade city
+3) compute variable reporting the number of centuries a city can be considered an important trade city
+overall, Wahl has 119 trade cities in ten European countries, constituting of 839 NUTS3 regions.
+If a region contains at least one city that is classified as a medieval trade city, the dummy variable is coded as '1'
 
+The variable Distance to trade center is captured to provide nuance and a direct test of the 'core-periphery' hypothesis.
+
+Because medieval trade affected development through agglomeration which takes place over centuries, 'centuries of trade' is meant to capture by proxy its path dependency. It is coded to take the value as the no of centuries from the century before the city became an important trade city 
+
+control
+.
+.
+.
+
+\section{Empirical Analysis: Replication Regression}
+Effect of medieval trade on contemporary regional development.
+Expectation: The effect can partially be explained by its influence on agglomeration patterns.
+
+\newpage
+
+\chapter{Aggregated Regional Data (NUTS2)}
+\label{chap:WOLF}
+combination and introduction to Wolf GDP data
+Have: set of variables from the data collected by Wahl and regionally dispersed along NUTS3, and GDP data going back to 1900 on NUTS2 level.
+Idea: Combine datasets to long form time-variant version for each year-region pair, including qualitative controls. The controls are taken from Wahl and data which is collected with respect to the reference period 2009 taken as proxies for the reference years.
+
+\section{Data Aggregation}
+\label{sec:DataAgg}
+Selection of variables
+The respective formula depends on the characteristics of each variable and is reported in 
 \subsection{WFM}
 wide-form merge
 
 \subsection{LFP}
 long-form Panel like
 
-\section{Composition of Variables}
-var comp
-Data Chapter ends with the ready-to-use dataset MA Data
-
-\newpage
-
-\chapter{Analysis}
-
 \section{Exploratory Data Analysis}
+
 \subsection{Sample Overview}
 Maps
 \subsection{Sample Overview}
 Graphs
 
+\subsection{Composition of further Variables}
+var comp
+introduction of Growth variable
+Data section ends with the ready-to-use dataset MA nuts2 Data
+
+
 \section{Empirical Baseline Model Approach}
 Models and Fits, general approach:
 I set up a baseline model first, in which I closely replicate the models run by Wahl.
 
-\subsection{Model with reduced fit}
-Reduced Fit 
+including reduced fit
+
+\subsection{Growth since 1900 as dependent variable}
+
+Describe run and results for the Growth since 1900 as dependent var
+
+\subsection{Growth over Observation Periods as dependent variable}
+
+Describe run and results for annual average Growth as dependent var
 
 \subsection{Information Loss in Aggregation}
 Analyse potential reasons for statistically insignificant results
 
 \section{Alternative Empirical Approaches}
-
-\subsection{Growth since 1900 as dependent variable}
-Reduced Fit
-
-\subsection{Growth over Observation Periods as dependent variable}
-Reduced Fit 
+Make use of the benefits of the deeper data and build the hypothesis that a combination of variables may provide more insights 
 
 \subsection{mining and trade center interaction}
+Interaction Term DID and the hypothesis that structural/sectoral shifts since roughly 1980 had a less destructive impact on the overall economic performance as measured by the level of GDP in trade regions than in mining regions without prior trade city exposure. 
 
-\subsection{dropping East Germany}
+\subsection{sector analysis over time employment shares}
 
-\section{X}
+\section{X with Outlook}
+
+Outlook: discussion on younger urban centers in Europe and the rest of the World. Results importantly hold for Europe only. What about North America? China, where trade has long history as well? Why would results potentially be applicable and why not.
+
+Double check sample choices: The islands Corse, Sicily, and Sardinia are excluded in the first place -- fair practice
+
+Urban centers or medieval trade cities? Are there large urban centers today that are economically strong and that weren't medieval trade cities? Perhaps in other parts of the world. What are reasons for economic strength there? How applicable is the result?
+
+Q: self reinforcing circular causation, caused by backward and forward linkages of agglomeration and core-periphery patterns
+
+Lay hands on the trade city definition -- Trade Center dummy
+In order to consistently match the Control Variables in the dataset constructed, for instance changing the trade city dummy without the respective change in distance to trade city and centuries of trade, I did not change the trade city dummy. Its underlying definition is well argued, but not fixed.
 
 \newpage
 
@@ -358,7 +437,7 @@ Reduced Fit
 % Include the appendices of the thesis as separate files from the Appendices folder
 % Uncomment the lines as you write the Appendices
 
-\include{Appendices/AppendixA}
+\include{Appendices/MA_AppendixA}
 
 
 %----------------------------------------------------------------------------------------

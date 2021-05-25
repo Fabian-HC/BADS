@@ -3053,9 +3053,6 @@
     <bcf:datasource type="file" datatype="bibtex">thesis_bib.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">smith1776</bcf:citekey>
-    <bcf:citekey order="2">krugman1998</bcf:citekey>
-    <bcf:citekey order="3">krugman1998</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="cms/global/" type="entry" sortscheme="cms" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>

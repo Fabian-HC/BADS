@@ -1,0 +1,31 @@
+% latex table generated in R 4.0.5 by xtable 1.8-4 package
+% Sun Apr 18 13:24:29 2021
+\begin{table}[ht]
+\centering
+\begingroup\tiny
+\begin{tabular}{rllrrrlr}
+  \hline
+ & panel & term & fit & estimate & std.error & signif & adj.r.squared \\ 
+  \hline
+A.1 & A & trade\_city\_final &   1 & 0.23 & 0.03 & *** & 0.79 \\ 
+  B.1 & B & lndist\_trade\_city1 &   1 & -0.25 & 0.04 & *** & 0.78 \\ 
+  C.1 & C & trade\_year &   1 & 0.03 & 0.00 & *** & 0.79 \\ 
+  A.2 & A & trade\_city\_final &   2 & 0.17 & 0.02 & *** & 0.84 \\ 
+  B.2 & B & lndist\_trade\_city1 &   2 & -0.12 & 0.03 & *** & 0.83 \\ 
+  C.2 & C & trade\_year &   2 & 0.02 & 0.00 & *** & 0.84 \\ 
+  A.3 & A & trade\_city\_final &   3 & 0.18 & 0.03 & *** & 0.79 \\ 
+  B.3 & B & lndist\_trade\_city1 &   3 & -0.13 & 0.04 & ** & 0.78 \\ 
+  C.3 & C & trade\_year &   3 & 0.02 & 0.00 & *** & 0.79 \\ 
+  A.4 & A & trade\_city\_final &   4 & 0.13 & 0.02 & *** & 0.88 \\ 
+  B.4 & B & lndist\_trade\_city1 &   4 & -0.14 & 0.03 & *** & 0.87 \\ 
+  C.4 & C & trade\_year &   4 & 0.02 & 0.00 & *** & 0.88 \\ 
+  A.5 & A & trade\_city\_final &   5 & 0.10 & 0.02 & *** & 0.90 \\ 
+  B.5 & B & lndist\_trade\_city1 &   5 & -0.10 & 0.03 & ** & 0.90 \\ 
+  C.5 & C & trade\_year &   5 & 0.01 & 0.00 & *** & 0.90 \\ 
+  A.6 & A & trade\_city\_final &   6 & 0.10 & 0.03 & *** & 0.85 \\ 
+  B.6 & B & lndist\_trade\_city1 &   6 & -0.10 & 0.04 & * & 0.85 \\ 
+  C.6 & C & trade\_year &   6 & 0.01 & 0.00 & *** & 0.85 \\ 
+   \hline
+\end{tabular}
+\endgroup
+\end{table}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.5)  4 APR 2021 20:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.5)  10 MAY 2021 16:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1670,13 +1670,7 @@ Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
-))) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/alphalph.sty
-Package: alphalph 2016/05/16 v2.5 Convert numbers to letters (HO)
-
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/intcalc.sty
-Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
-))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hyperref.sty
+))) (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
@@ -1690,7 +1684,7 @@ Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package hobsub Info: Skipping package `ifluatex' (already loaded).
 Package hobsub Info: Skipping package `ifvtex' (already loaded).
-Package hobsub Info: Skipping package `intcalc' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
 Package hobsub Info: Skipping package `ifpdf' (already loaded).
 Package hobsub Info: Skipping package `etexcmds' (already loaded).
 Package hobsub Info: Skipping package `kvsetkeys' (already loaded).
@@ -1756,7 +1750,7 @@ LaTeX Info: Redefining \pageref on input line 6432.
 )
 Package scrhack Info: hyperref hack deactivated because of
 (scrhack)             detection of hyperref version, that doesn't
-(scrhack)             need that hack, on input line 144.
+(scrhack)             need that hack, on input line 71.
 
 
 Package hyperref Message: Driver (autodetected): hpdftex.
@@ -1772,6 +1766,9 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip102
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/alphalph.sty
+Package: alphalph 2016/05/16 v2.5 Convert numbers to letters (HO)
 )
 Package hyperref Info: Option `bookmarksopen' set `true' on input line 144.
 Package hyperref Info: Option `hypertexnames' set `false' on input line 144.
@@ -1803,7 +1800,11 @@ Package biblatex Info: ... file 'english.lbx' found.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 )))
-(./Template_MasterThesis.aux (./Appendices/AppendixA.aux))
+(./Template_MasterThesis.aux (./Appendices/MA_AppendixA.aux
+
+LaTeX Warning: Label `' multiply defined.
+
+))
 \openout1 = `Template_MasterThesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 144.
@@ -1823,8 +1824,7 @@ LaTeX Font Info:    ... okay on input line 144.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 144.
 LaTeX Font Info:    ... okay on input line 144.
 LaTeX Font Info:    Try loading font information for T1+ppl on input line 144.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1ppl.fd
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
 Now handling font encoding TS1 ...
@@ -2066,7 +2066,7 @@ File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 \c__siunitx_mathtt_int=\count379
 
 1: section
-<husiegel.jpg, id=80, 130.8087pt x 130.8087pt>
+<husiegel.jpg, id=72, 130.8087pt x 130.8087pt>
 File: husiegel.jpg Graphic file (type jpg)
  <use husiegel.jpg>
 Package pdftex.def Info: husiegel.jpg used on input line 161.
@@ -2165,82 +2165,77 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
 [1
 
 
-]
+] [2]
 Chapter 2.
-1: section
-[2
-
-]
-Chapter 3.
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 295.
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 298.
 1: section
 [3
 
 ]
-Chapter 4.
+Chapter 3.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 323.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 382.
 1: section
 [4
 
-] [5]
-Chapter 5.
-1: section
-[6
-
-]
-\openout2 = `Appendices/AppendixA.aux'.
-
- (./Appendices/AppendixA.tex
-Appendix A.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 11.
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-))
+] [5] [6]
+Chapter 4.
 1: section
 [7
 
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 375.
-
+] [8] [9]
+Chapter 5.
 1: section
-[8
-
-
+[10
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 375.
- (./Template_MasterThesis.aux (./Appendices/AppendixA.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 375.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 375.
+\openout2 = `Appendices/MA_AppendixA.aux'.
+
+ (./Appendices/MA_AppendixA.tex
+Appendix A.
+)
+1: section
+[11
+
+
+] [12]
+
+LaTeX Warning: Empty bibliography on input line 499.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 504.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 504.
+(./Template_MasterThesis.aux (./Appendices/MA_AppendixA.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 504.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 504.
 Package rerunfilecheck Info: File `Template_MasterThesis.out' has not changed.
-(rerunfilecheck)             Checksum: 70AE5BAE7424A1ECB4840892274EBA87;2665.
+(rerunfilecheck)             Checksum: 82C9DE250B848048ABC8BE074F2B17EB;2712.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'Template_MasterThesis.run.xml'.
 \openout1 = `Template_MasterThesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35728 strings out of 492995
- 716174 string characters out of 6132705
- 1285062 words of memory out of 5000000
- 38799 multiletter control sequences out of 15000+600000
- 42272 words of font info for 80 fonts, out of 8000000 for 9000
+ 35516 strings out of 492995
+ 711589 string characters out of 6132705
+ 1296475 words of memory out of 5000000
+ 38586 multiletter control sequences out of 15000+600000
+ 48280 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 54i,19n,86p,10394b,2896s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texli
-ve/2017/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/local/texlive
-/2017/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/texmf-di
-st/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/texmf-dist/font
-s/type1/urw/palatino/uplri8a.pfb>
-Output written on Template_MasterThesis.pdf (14 pages, 364561 bytes).
+ 58i,19n,94p,10394b,2904s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/tex
+mf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/texmf-dist
+/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on Template_MasterThesis.pdf (18 pages, 332582 bytes).
 PDF statistics:
- 225 PDF objects out of 1000 (max. 8388607)
- 200 compressed objects within 2 object streams
- 50 named destinations out of 1000 (max. 500000)
- 158 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 230 PDF objects out of 1000 (max. 8388607)
+ 201 compressed objects within 3 object streams
+ 53 named destinations out of 1000 (max. 500000)
+ 142 words of extra memory for PDF output out of 10000 (max. 10000000)
 
